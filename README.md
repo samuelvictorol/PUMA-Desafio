@@ -11,8 +11,7 @@
 
 ## Responsividade:
 ![image](https://github.com/samuelvictorol/PUMA-Desafio/assets/95868897/e06b8cca-061f-4035-a339-6a0d51d1d00a)
-![image](https://github.com/samuelvictorol/PUMA-Desafio/assets/95868897/b05bf367-aaac-4b0d-8f79-4c9fbe3a63a3)
-
+![image](https://github.com/samuelvictorol/PUMA-Desafio/assets/95868897/41000526-8b3a-4594-84b1-f36ac0fcff7d)
 
 # Tecnologias Utilizadas
 - Postman
