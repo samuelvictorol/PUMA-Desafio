@@ -162,6 +162,7 @@ input:focus {
 @media (max-width: 1100px) {
     #searchbar-input{
         width: 50%;
+        font-size: .8rem;
     }
     #search-btn {
         width: 25%;

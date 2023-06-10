@@ -55,7 +55,6 @@ p{
     margin-top: 5vh;
 }
 
-
 .cards {
     margin-left: 5vh;
     margin-right: 5vh;
@@ -67,6 +66,35 @@ p{
     gap: 2.5%;
     width: 100vw;
     height: 100vh;
+    position: relative;
+}
+
+.filter-by{
+    position: absolute;
+    top: 13vh;
+    margin-right: 2vh;
+    gap: 1rem;
+    z-index: 5;
+}
+
+#btn-filter {
+    width: 30px;
+    height: 30px;
+    font-family: var(--montserrat);
+    outline: none;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 6px;
+    padding: 0.5rem;
+    border:1px solid #3a3a3a;
+    opacity: 1;
+    background-color: #74747469;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+#btn-filter:hover{
+    opacity: .8;
 }
 
 .card{
@@ -85,7 +113,7 @@ p{
 }
 
 .card:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.599);
     cursor: pointer;
     border-bottom:2px solid #00d0ff;
@@ -196,5 +224,14 @@ p{
     }
     .card:hover {
         transform: scale(1);
+    }
+    .filter-by {
+        position: fixed;
+        left: 1vw;
+        
+    }
+    #btn-filter {
+        width: 20px;
+        height: 20px;
     }
 }

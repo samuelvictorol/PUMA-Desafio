@@ -36,4 +36,15 @@ export class HomeComponent implements OnInit {
       return
     }
   }
+
+  filterBy() {
+    const sortedUsers = this.users.sort((a, b) => {
+        if (a.name < b.name) { return -1; }
+        if (a.name > b.name) { return 1; }
+        return 0;
+    });
+
+    this.users = sortedUsers;
+}
+
 }

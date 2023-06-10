@@ -7,6 +7,9 @@
             <img class="animate__animated animate__zoomIn  animate__slow" src="assets/imgs/plant.svg" alt="imagem predio construcao" id="building">
         </div>
         <div class="cards" *ngIf="users.length > 0">
+            <div class="filter-by" title="Filtrar por ordem alfabética">
+                <img src="assets/icons/filter.svg" (click)="filterBy()" id="btn-filter">
+            </div>
             <div class="card animate__animated animate__fadeIn"  *ngFor="let user of users">
                 <img title="Este é seu usuário favorito." *ngIf="user.fav" id="star-gold" class="animate__animated animate__bounceIn" src="assets/icons/star-gold.svg" alt="star gold">
                 <img title="Clique para favoritar este usuário" *ngIf="!user.fav" (click)="toggleStar(user)" src="assets/icons/star.svg" alt="usuário favorito" id="star">
