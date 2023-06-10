@@ -177,8 +177,9 @@ p{
     .cards{
         padding-top: 15vh;
         justify-content: center;
+        align-items: initial;
         height: 250vh;
-        gap: 2rem;
+        gap: 1rem;
     }
     .card {
         width: 90%;
