@@ -6,13 +6,15 @@ import GitHubUser from '../interfaces/GitHubUser';
   providedIn: 'root'
 })
 export class UserService {
+  usersDB: GitHubUser[] = [];
 
   constructor(private http: HttpClient) { 
   }
 
   public async getAllUsers () {
     const db = await lastValueFrom(this.http.get<GitHubUser[]>('http://localhost:3333/users'))
-    return Object.values(db);
+    this.usersDB = Object.values(db);
+    return this.usersDB;
   
   }
 
@@ -26,4 +28,9 @@ export class UserService {
       location.reload();
     }, 1500);
   }
+
+  getAllUsersLenght(){
+    return this.usersDB.length;
+  }
+
 }

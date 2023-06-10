@@ -19,34 +19,37 @@ export class SearchbarComponent implements OnInit {
   }
 
   async findUser() {
-    try {
-      const response = await fetch(`https://api.github.com/users/${this.username}`);
-      if (response.ok) {
-        this.modal = true;
-        const fullUser = await response.json();
-        this.user = {
-          login: fullUser.login,
-          name: fullUser.name,
-          avatar_url: fullUser.avatar_url,
-          html_url: fullUser.html_url,
-          fav: false
+    if(this.userService.getAllUsersLenght() == 5){
+      return alert('Você já tem 5 usuarios favoritos')
+    } else{
+      try {
+        const response = await fetch(`https://api.github.com/users/${this.username}`);
+        if (response.ok) {
+          this.modal = true;
+          const fullUser = await response.json();
+          this.user = {
+            login: fullUser.login,
+            name: fullUser.name,
+            avatar_url: fullUser.avatar_url,
+            html_url: fullUser.html_url,
+            fav: false
+          }
+        } else {
+          this.user = null;
+          alert('nao achou o usuario')
         }
-      } else {
-        this.user = null;
-        alert('nao achou o usuario')
+      } catch (error) {
+        alert('Não foi possivel buscar o usuario no momento.')
       }
-    } catch (error) {
-      alert('Não foi possivel buscar o usuario no momento.')
-    }
+    } 
   }
-
   addFavUser() {
     this.userService.insertUser(this.user);
     // this.userService.getAllUsers();
     this.closeModal();
   }
 
-  closeModal() {
+  closeModal() {  
     this.modal = false;
   }
 

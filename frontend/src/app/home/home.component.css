@@ -26,6 +26,7 @@
     width: 18%;
     height: 60%;
     background-color: var(--cards-background-color);
+    backdrop-filter: blur(6px);
     font-family: var(--montserrat);
     transition: all 0.2s ease-out;
 }
