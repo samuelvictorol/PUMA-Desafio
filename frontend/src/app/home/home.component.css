@@ -70,6 +70,7 @@
 #card-name {
     color: #aaaaaa;
     font-size: 1.3rem;
+    height: 5vh;
 }
 
 #link-card {
@@ -84,9 +85,10 @@
 
 #btn-rmv{
     margin-top: 2vh;
+    font-weight: bold;
     outline: none;
     text-decoration: none;
-    color: #ff0000;
+    color: #ff3a3a;
     font-size: .8rem;
     border-radius: 6px;
     padding: 0.5rem;
@@ -97,13 +99,13 @@
 #btn-rmv:hover, #link-card:hover{
     transition: .2s ease-in-out;
     cursor: pointer;
-    opacity: .8;
+    opacity: .6;
 }
 
 @media (max-width: 1100px) {
     .cards{
         padding-top: 15vh;
-        gap: 2vh;
+        gap: 4  vh;
     }
     .card {
         width: 90%;

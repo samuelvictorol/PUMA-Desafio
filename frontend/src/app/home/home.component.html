@@ -1,7 +1,7 @@
 <section class="home">
     <div class="home">
         <div class="cards">
-            <div class="card"  *ngFor="let user of users">
+            <div class="card animate__animated animate__fadeIn"  *ngFor="let user of users">
                 <img src="assets/icons/star.svg" alt="usuário favorito" id="star">
                 <img [src]="user.avatar_url" id="card-img" alt="">
                 <h1 id="card-name">{{ user.name }} </h1>

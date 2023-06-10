@@ -10,10 +10,10 @@ import { UserService } from '../services/user.service';
 export class SearchbarComponent implements OnInit {
   username = '';
   user: GitHubUser | null = null;
+  users: GitHubUser[] = [];
   modal = false;
 
   constructor(private userService: UserService) { }
-
 
   ngOnInit(): void {
   }
@@ -23,7 +23,14 @@ export class SearchbarComponent implements OnInit {
       const response = await fetch(`https://api.github.com/users/${this.username}`);
       if (response.ok) {
         this.modal = true;
-        this.user = await response.json();
+        const fullUser = await response.json();
+        this.user = {
+          login: fullUser.login,
+          name: fullUser.name,
+          avatar_url: fullUser.avatar_url,
+          html_url: fullUser.html_url,
+          fav: false
+        }
       } else {
         this.user = null;
         alert('nao achou o usuario')
@@ -35,7 +42,7 @@ export class SearchbarComponent implements OnInit {
 
   addFavUser() {
     this.userService.insertUser(this.user);
-    this.userService.getAllUsers();
+    // this.userService.getAllUsers();
     this.closeModal();
   }
 
