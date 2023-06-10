@@ -1,5 +1,5 @@
 # Desafio PUMA
-- backend: Express.js
-- frontend: AngularJS
+- Backend: Express.js
+- Frontend: Angular
 ## Link do desafio com especificações 
 - https://github.com/jsfelix/puma-code-challenge
