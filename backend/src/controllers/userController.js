@@ -45,8 +45,25 @@ const deleteUser = (req, res) => {
     res.status(200).json({ message: 'Usuário deletado com sucesso' });
 }
 
+const toggle_star = (req, res) => {
+    const favUsersDB = require('../data/db.json')
+    let updatedUsers = favUsersDB.map(user => {
+        if (user.login === req.params.login) {
+            return { ...user, fav: true };
+        } else {
+            return { ...user, fav: false };
+        }
+    });
+    
+    fs.writeFileSync(path.join(__dirname, '../data/db.json'), JSON.stringify(updatedUsers, null, 2));
+    
+    res.status(200).json({ message: 'Usuário atualizado com sucesso' })
+    return updatedUsers;
+}
+
 module.exports = {
     getAllUsers,
     addUser,
-    deleteUser
+    deleteUser,
+    toggle_star
 }
