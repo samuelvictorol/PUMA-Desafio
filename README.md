@@ -7,11 +7,11 @@
 # O frontend:
 
 ![image](https://github.com/samuelvictorol/PUMA-Desafio/assets/95868897/e4bc637d-c0be-4cdd-a04e-380d6888d673)
-![image](https://github.com/samuelvictorol/PUMA-Desafio/assets/95868897/9c5a443a-c2b6-4918-8121-bfd4df0a58ab)
+![image](https://github.com/samuelvictorol/PUMA-Desafio/assets/95868897/aebbb8b2-d84b-4964-b326-cf0ff31e768e)
 
 ## Responsividade:
-![image](https://github.com/samuelvictorol/PUMA-Desafio/assets/95868897/e06b8cca-061f-4035-a339-6a0d51d1d00a)
-![image](https://github.com/samuelvictorol/PUMA-Desafio/assets/95868897/41000526-8b3a-4594-84b1-f36ac0fcff7d)
+![image](https://github.com/samuelvictorol/PUMA-Desafio/assets/95868897/8de87264-b46f-4532-a212-66e07ef87fb6)
+![image](https://github.com/samuelvictorol/PUMA-Desafio/assets/95868897/fc7d8f39-63a8-4b29-87aa-8189013161d3)
 
 # O backend:
 - Foi utilizado um db.json para simular um banco de dados. As rotas de requisições foram feitas com Node e Express.js
