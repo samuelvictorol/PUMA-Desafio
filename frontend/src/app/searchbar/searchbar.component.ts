@@ -21,7 +21,10 @@ export class SearchbarComponent implements OnInit {
   async findUser() {
     if(this.userService.getAllUsersLenght() == 5){
       return alert('Você já tem 5 usuarios favoritos. Apague um para continuar.')
-    } else{
+    }else if (await this.checkUsername()) {
+      return alert('Você já tem esse usuario como favorito.')
+    } 
+    else{
       try {
         const response = await fetch(`https://api.github.com/users/${this.username}`);
         if (response.ok) {
@@ -48,6 +51,18 @@ export class SearchbarComponent implements OnInit {
     this.userService.insertUser(this.user);
     // this.userService.getAllUsers();
     this.closeModal();
+  }
+
+  async checkUsername(){
+    const users = await this.userService.getAllUsers();
+    let userExists = false;
+    users.forEach((user) => {
+      if(user.login == this.username){
+        userExists = true;
+        return;
+      }
+    });
+    return userExists
   }
 
   closeModal() {  
