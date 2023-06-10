@@ -20,6 +20,19 @@ export class UserService {
 
   public async insertUser(user: any) {
     await lastValueFrom(this.http.post<GitHubUser>('http://localhost:3333/users', user));
+    this.loader();
+  }
+
+  getAllUsersLenght(){
+    return this.usersDB.length;
+  }
+
+  public async deleteUser(user: string) {
+    await lastValueFrom(this.http.delete<GitHubUser>('http://localhost:3333/users/' + user));
+    this.loader();
+  }
+
+  loader() {
     const loader = document.querySelector('.loader-wrapper') as HTMLElement;
     loader.style.visibility = 'visible';
     
@@ -27,10 +40,6 @@ export class UserService {
       // fazer animacao de loading aqui 
       location.reload();
     }, 1500);
-  }
-
-  getAllUsersLenght(){
-    return this.usersDB.length;
   }
 
 }

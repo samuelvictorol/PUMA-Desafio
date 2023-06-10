@@ -14,9 +14,17 @@ export class HomeComponent implements OnInit {
   async ngOnInit() {
     await this.getAllFavUsers();
   }
-
   
   async getAllFavUsers() {
     this.users = await this.userService.getAllUsers();
+  }
+
+  deleteUser(user: any) {
+    const confirmation = confirm('Tem certeza que deseja deletar o usuário ' + user + ' ?');
+    if (confirmation){
+      this.userService.deleteUser(user);
+    }else {
+      return
+    }
   }
 }
