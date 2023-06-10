@@ -1,4 +1,6 @@
+import GitHubUser from '../interfaces/GitHubUser';
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  users: GitHubUser[] = [];
+  constructor(private userService: UserService) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  async ngOnInit() {
+    await this.getAllFavUsers();
   }
 
+  
+  async getAllFavUsers() {
+    this.users = await this.userService.getAllUsers();
+  }
 }

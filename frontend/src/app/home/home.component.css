@@ -1,10 +1,111 @@
 .home {
-    height: calc(100vh - var(--searchbar-height));
+    height: 100vh;
     width: 100vw;
     display: flex;
-    padding-top: var(--searchbar-height);
-    background: #C9D6FF;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    overflow-y: scroll;
+    padding: 0 1rem;
+}
+
+.card{
+    position: relative;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 60%;
+    background-color: var(--cards-background-color);
+    font-family: var(--montserrat);
+    transition: all 0.2s ease-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.599);
+    cursor: pointer;
+}
+
+
+#card-img {
+    border-radius: 60px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.599);
+    width: 10rem;
+    height: 10rem;
+}
+
+#star {
+    z-index: 5;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    text-align: center;
+    filter: invert(1);
+    height: 2rem;
+    opacity: 0.3;
+    transition: .3s ease-in-out;
+
+}
+
+#star:hover {
+    cursor: pointer;
+    opacity: .7;
+}
+
+#star-favorite {
+    opacity: 1;
+}
+
+#card-name {
+    color: #aaaaaa;
+}
+
+#link-card {
+    outline: none;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius: 6px;
+    padding: 0.5rem;
+    border:1px solid #fff;
+}
+
+#btn-rmv{
+    margin-top: 2vh;
+    outline: none;
+    text-decoration: none;
+    color: #ff0000;
+    font-size: .8rem;
+    border-radius: 6px;
+    padding: 0.5rem;
+    border:1px solid #ff0000;
+    opacity: 1;
+}
+
+#btn-rmv:hover, #link-card:hover{
+    transition: .2s ease-in-out;
+    cursor: pointer;
+    opacity: .8;
+}
+
+@media (max-width: 1100px) {
+    .cards{
+        padding-top: 15vh;
+        gap: 2vh;
+    }
+    .card {
+        width: 90%;
+        height: 80%;
+    }
 }

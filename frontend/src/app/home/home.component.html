@@ -1,3 +1,13 @@
 <section class="home">
-    
+    <div class="home">
+        <div class="cards">
+            <div class="card"  *ngFor="let user of users">
+                <img src="assets/icons/star.svg" alt="usuário favorito" id="star">
+                <img [src]="user.avatar_url" id="card-img" alt="">
+                <h1 id="card-name">{{ user.name }} </h1>
+                <a target="_blank" id="link-card" [href]="user.html_url">visitar</a>
+                <a id="btn-rmv">Remover</a>
+            </div>
+        </div>
+    </div>
 </section>

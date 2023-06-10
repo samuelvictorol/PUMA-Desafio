@@ -70,7 +70,7 @@ input:focus {
     position: relative;
     width: 50vw;
     height: 80vh;
-    background-color: #0a0a0aab;
+    background-color: var(--cards-background-color);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
