@@ -1,5 +1,5 @@
 .loader-wrapper {
-    position: absolute;
+    position: fixed;
     top: 0vh;
     left: 0vw;
     background-color: #191919d1;

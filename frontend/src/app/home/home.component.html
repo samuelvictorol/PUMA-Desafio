@@ -2,8 +2,9 @@
     <div class="home">
         <div class="cards">
             <div class="card animate__animated animate__fadeIn"  *ngFor="let user of users">
-                <img src="assets/icons/star.svg" alt="usuário favorito" id="star">
-                <img [src]="user.avatar_url" id="card-img" alt="">
+                <img title="Este é seu usuário favorito." *ngIf="user.fav" id="star-gold" class="animate__animated animate__bounceIn" src="assets/icons/star-gold.svg" alt="star gold">
+                <img title="Clique para favoritar este usuário" *ngIf="!user.fav" (click)="toggleStar(user.login)" src="assets/icons/star.svg" alt="usuário favorito" id="star">
+                <img [src]="user.avatar_url" id="card-img" alt="avatar do usuário">
                 <h1 id="card-name">{{ user.name }} </h1>
                 <a target="_blank" id="link-card" [href]="user.html_url">visitar</a>
                 <a id="btn-rmv" (click)="deleteUser(user.login)">Remover</a>

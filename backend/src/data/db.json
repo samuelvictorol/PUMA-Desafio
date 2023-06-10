@@ -1,16 +1,16 @@
 [
   {
-    "login": "samuelvictorol",
-    "name": "Samuel Victor",
-    "avatar_url": "https://avatars.githubusercontent.com/u/95868897?v=4",
-    "html_url": "https://github.com/samuelvictorol",
-    "fav": false
-  },
-  {
     "login": "pedro-prp",
     "name": "Pedro Rodrigues",
     "avatar_url": "https://avatars.githubusercontent.com/u/32720946?v=4",
     "html_url": "https://github.com/pedro-prp",
     "fav": true
+  },
+  {
+    "login": "samuelvictorol",
+    "name": "Samuel Victor",
+    "avatar_url": "https://avatars.githubusercontent.com/u/95868897?v=4",
+    "html_url": "https://github.com/samuelvictorol",
+    "fav": false
   }
 ]

@@ -27,4 +27,13 @@ export class HomeComponent implements OnInit {
       return
     }
   }
+
+  toggleStar(user: any) {
+    const confirmation = confirm('Tem certeza que deseja marcar (' + user + ') como favorito ?');
+    if (confirmation){
+      this.userService.toggleStar(user);
+    }else {
+      return
+    }
+  }
 }

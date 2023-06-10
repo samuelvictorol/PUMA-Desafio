@@ -42,4 +42,9 @@ export class UserService {
     }, 1500);
   }
 
+  async toggleStar(user: any) {
+    await lastValueFrom(this.http.patch<GitHubUser>('http://localhost:3333/users/' + user + '/toggle-star', user));
+    this.loader();
+  }
+
 }
