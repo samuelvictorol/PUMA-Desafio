@@ -1,5 +1,4 @@
 .loader-wrapper {
-    visibility: hidden;
     position: absolute;
     top: 0vh;
     left: 0vw;
@@ -9,7 +8,7 @@
     height: 100vh;
     font-family: var(--montserrat);
     z-index: 15; 
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;

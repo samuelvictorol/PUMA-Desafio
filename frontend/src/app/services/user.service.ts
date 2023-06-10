@@ -34,7 +34,7 @@ export class UserService {
 
   loader() {
     const loader = document.querySelector('.loader-wrapper') as HTMLElement;
-    loader.style.visibility = 'visible';
+    loader.style.display = 'flex';
     
     setTimeout(() => {
       // fazer animacao de loading aqui 
