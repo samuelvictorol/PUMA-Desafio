@@ -1,5 +1,12 @@
 [
   {
+    "login": "samuelvictorol",
+    "name": "Samuel Victor",
+    "avatar_url": "https://avatars.githubusercontent.com/u/95868897?v=4",
+    "html_url": "https://github.com/samuelvictorol",
+    "fav": false
+  },
+  {
     "login": "pedro-prp",
     "name": "Pedro Rodrigues",
     "avatar_url": "https://avatars.githubusercontent.com/u/32720946?v=4",
@@ -7,10 +14,24 @@
     "fav": true
   },
   {
-    "login": "samuelvictorol",
-    "name": "Samuel Victor",
-    "avatar_url": "https://avatars.githubusercontent.com/u/95868897?v=4",
-    "html_url": "https://github.com/samuelvictorol",
+    "login": "DionVitor",
+    "name": "Dion Vítor",
+    "avatar_url": "https://avatars.githubusercontent.com/u/71671413?v=4",
+    "html_url": "https://github.com/DionVitor",
+    "fav": false
+  },
+  {
+    "login": "A",
+    "name": "Shuvalov Anton",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1410106?v=4",
+    "html_url": "https://github.com/A",
+    "fav": false
+  },
+  {
+    "login": "b",
+    "name": "Benjamin Black",
+    "avatar_url": "https://avatars.githubusercontent.com/u/31712?v=4",
+    "html_url": "https://github.com/b",
     "fav": false
   }
 ]

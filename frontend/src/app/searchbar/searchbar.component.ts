@@ -36,7 +36,8 @@ export class SearchbarComponent implements OnInit {
           }
         } else {
           this.user = null;
-          alert('nao achou o usuario')
+          this.username = '';
+          alert('Usuário não Existe')
         }
       } catch (error) {
         alert('Não foi possivel buscar o usuario no momento.')
