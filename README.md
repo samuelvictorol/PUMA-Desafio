@@ -19,6 +19,6 @@
 - npm start
 
 # Backend
-= npm install
+- npm install
 - npm run dev 
 - ouvindo na porta 3333
