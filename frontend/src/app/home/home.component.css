@@ -34,7 +34,6 @@
     border-radius:100%;
     width: 400px;
     height: 400px;
-    border-bottom: 10px solid rgb(42, 41, 41);
 }
 
 h1, p{
@@ -165,14 +164,21 @@ p{
     opacity: .6;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
     .lista-vazia {
-        margin-top:40vh;
-        margin-left: 15vh;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15vh;
+        flex-direction: column-reverse;
+        margin-top:50vh;
+        margin-left: 2vh;
     }
     #building {
-        height: 300px;
-        width: 300px;
+        height: 250px;
+        width: 250px;
+    }
+    .text-vazia{
+        font-size: 1.5rem;
     }
     .cards{
         padding-top: 15vh;
