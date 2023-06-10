@@ -1,0 +1,174 @@
+nav {
+    z-index: 5;
+    position: absolute;
+    height: var(--searchbar-height);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.599);
+    font-family: var(--montserrat);
+}
+
+#github-svg {
+    filter: invert(1);
+    height: 3rem;
+    width: 3rem;
+}
+
+#searchbar-input{
+    width: 30vw;
+    font-weight: bold;
+    height: 5vh;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    transition: all 0.1s ease-in-out;
+}
+
+input:focus {
+    padding-left: .5vw;
+}
+
+#search-btn {
+    width: 10vw;
+    font-weight: bold;
+    color: #fff;
+    height: 5vh;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    background-color: #139fea;  /* fallback for old browsers */
+    transition: all .2s ease-in-out;
+}
+
+#search-btn:hover {
+    opacity: .8;
+}
+
+.modal-user {
+    z-index: 10;
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000af;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    border: 2px solid #575757;
+    position: relative;
+    width: 50vw;
+    height: 80vh;
+    background-color: #0a0a0aab;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vh;
+    align-items: center;
+    font-family: var(--montserrat);
+}
+
+#cancel-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+#cancel-btn:hover {
+    opacity: .8;
+}
+
+#user-avatar {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border-top: 6px solid #1f1f1f;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.599);
+}
+
+#name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+#login {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #139fea;
+    margin-bottom: 1rem;
+}
+
+#link-profile {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #f0f0f0;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: .5rem;
+    border: 1px solid #f0f0f0;
+}
+
+#add-btn {
+    width: 30%;
+    margin-top: 1rem;
+    color: #fff;
+    background-color: #139fea;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: .5rem;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+}
+
+#heart-svg {
+    filter: invert(1);
+    width: 2rem;
+    height: 2rem;
+}
+
+#link-profile:hover, #add-btn:hover {
+    transition: all .2s ease-in-out;
+    opacity: .8;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1100px) {
+    #searchbar-input{
+        width: 50%;
+    }
+    #search-btn {
+        width: 25%;
+        font-size: .8rem;
+    }
+    .modal{
+        width: 90%;
+    }
+    #add-btn{
+        width: 50%;
+        font-size: 1rem;
+    }
+}
