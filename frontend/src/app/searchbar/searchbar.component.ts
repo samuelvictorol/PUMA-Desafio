@@ -25,11 +25,18 @@ export class SearchbarComponent implements OnInit {
         this.modal = true;
         this.user = await response.json();
       } else {
+        this.user = null;
         alert('nao achou o usuario')
       }
     } catch (error) {
       alert('Não foi possivel buscar o usuario no momento.')
     }
+  }
+
+  addFavUser() {
+    this.userService.insertUser(this.user);
+    this.userService.getAllUsers();
+    this.closeModal();
   }
 
   closeModal() {

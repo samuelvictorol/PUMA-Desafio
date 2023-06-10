@@ -78,7 +78,7 @@ input:focus {
     gap: 1vh;
     align-items: center;
     font-family: var(--montserrat);
-}
+} 
 
 #cancel-btn {
     position: absolute;

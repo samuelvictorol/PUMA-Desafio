@@ -15,4 +15,15 @@ export class UserService {
     return Object.values(db);
   
   }
+
+  public async insertUser(user: any) {
+    await lastValueFrom(this.http.post<GitHubUser>('http://localhost:3333/users', user));
+    const loader = document.querySelector('.loader-wrapper') as HTMLElement;
+    loader.style.visibility = 'visible';
+    
+    setTimeout(() => {
+      // fazer animacao de loading aqui 
+      location.reload();
+    }, 1500);
+  }
 }

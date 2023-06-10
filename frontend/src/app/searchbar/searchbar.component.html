@@ -4,13 +4,13 @@
     <button id="search-btn" (click)="findUser()">Buscar usuário</button>
 </nav>
 <div class="modal-user animate__animated animate__fadeIn" *ngIf="modal">
-    <div class="not-found"></div>
+    <div class="loader"></div>
     <div class="modal animate__animated animate__zoomIn"*ngIf="user" >
         <img (click)="closeModal()" src="assets/icons/cancel.svg" alt="cancelar" id="cancel-btn">
         <img [src]="user.avatar_url" alt="User avatar" id="user-avatar">
         <p id="name">{{ user.name }}</p>
         <h1 id="login">{{ user.login }}</h1>
         <a target="_blank" [href]="user.html_url" id="link-profile">Ver perfil</a>
-        <a id="add-btn"><img id="heart-svg" src="assets/icons/heart.svg" alt="">Favoritar </a>
+        <a id="add-btn" (click)="addFavUser()"><img id="heart-svg" src="assets/icons/heart.svg" alt="">Favoritar </a>
     </div>
 </div>

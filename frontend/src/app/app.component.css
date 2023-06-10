@@ -1,0 +1,32 @@
+.loader-wrapper {
+    visibility: hidden;
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+    background-color: #191919d1;
+    backdrop-filter: blur(8px);
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--montserrat);
+    z-index: 15; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vh;
+    color: white;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #2d3032;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 3s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
