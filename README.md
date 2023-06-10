@@ -4,21 +4,36 @@
 ## Link do desafio com especificações 
 - https://github.com/jsfelix/puma-code-challenge
 
-![image](https://github.com/samuelvictorol/PUMA-Desafio/assets/95868897/c6756232-4138-4fab-b76a-a8afed6e6f79)
+# O front:
 
-![image](https://github.com/samuelvictorol/PUMA-Desafio/assets/95868897/d0458e02-253e-4df1-b1eb-b96ec10a74b2)
+![image](https://github.com/samuelvictorol/PUMA-Desafio/assets/95868897/4a1eda3c-8ac4-4360-92e7-13b51fb024fb)
+![image](https://github.com/samuelvictorol/PUMA-Desafio/assets/95868897/e4bc637d-c0be-4cdd-a04e-380d6888d673)
+![image](https://github.com/samuelvictorol/PUMA-Desafio/assets/95868897/9c5a443a-c2b6-4918-8121-bfd4df0a58ab)
 
-![image](https://github.com/samuelvictorol/PUMA-Desafio/assets/95868897/745b717a-1e4d-4cfc-b83d-6063231faf9c)
+## Responsividade:
+![image](https://github.com/samuelvictorol/PUMA-Desafio/assets/95868897/10dce0fa-c4a6-46cf-9c43-a147bdc2bebb)
+![image](https://github.com/samuelvictorol/PUMA-Desafio/assets/95868897/e06b8cca-061f-4035-a339-6a0d51d1d00a)
+![image](https://github.com/samuelvictorol/PUMA-Desafio/assets/95868897/b05bf367-aaac-4b0d-8f79-4c9fbe3a63a3)
+![image](https://github.com/samuelvictorol/PUMA-Desafio/assets/95868897/54f75f06-a7a5-4912-8e12-68f925e83354)
 
 
-![image](https://github.com/samuelvictorol/PUMA-Desafio/assets/95868897/ac5ea976-9557-43e2-a3a7-da2b30b3d905)
+# Tecnologias Utilizadas
+- Postman
+- Git
+- Express.js
+- Node.js
+- Angular
+- Typescript
+- Javascript
 
+# Run local
 
-# Frontend
+## Frontend
 - npm install 
 - npm start
 
-# Backend
+## Backend
 - npm install
 - npm run dev 
-- ouvindo na porta 3333
+- PORT=3333
+- Requisiçoes GET POST PATCH DELETE
