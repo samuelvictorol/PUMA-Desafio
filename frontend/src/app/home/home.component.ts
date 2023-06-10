@@ -19,19 +19,19 @@ export class HomeComponent implements OnInit {
     this.users = await this.userService.getAllUsers();
   }
 
-  deleteUser(user: any) {
-    const confirmation = confirm('Tem certeza que deseja deletar o usuário ' + user + ' ?');
+  deleteUser(user: GitHubUser) {
+    const confirmation = confirm('Tem certeza que deseja deletar ' + user.name + ' da sua lista de favoritos ?');
     if (confirmation){
-      this.userService.deleteUser(user);
+      this.userService.deleteUser(user.login);
     }else {
       return
     }
   }
 
-  toggleStar(user: any) {
-    const confirmation = confirm('Tem certeza que deseja marcar (' + user + ') como favorito ?');
+  toggleStar(user: GitHubUser) {
+    const confirmation = confirm('Tem certeza que deseja marcar ' + user.name + ' como favorito ?');
     if (confirmation){
-      this.userService.toggleStar(user);
+      this.userService.toggleStar(user.login);
     }else {
       return
     }

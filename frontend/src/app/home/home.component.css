@@ -1,8 +1,61 @@
 .home {
     min-height: 100vh;
     width: 100vw;
+    overflow-x: hidden;
     display: flex;
 }
+
+.lista-vazia {
+    z-index: 4;
+    height: 10vh;
+    width: 80vw;
+    margin-top: 30vh;
+    margin-left: 10rem;
+    font-family: var(--montserrat);
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+}
+
+.text-vazia {
+    color: #000;
+    margin-top: 4rem;
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: var(--montserrat);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#building {
+    border-radius:100%;
+    width: 400px;
+    height: 400px;
+    border-bottom: 10px solid rgb(42, 41, 41);
+}
+
+h1, p{
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.h1{
+    color: #fff;
+    background-color: #000000a9;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+p{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d4d4d4;
+    margin-top: 5vh;
+}
+
 
 .cards {
     margin-left: 5vh;
@@ -77,6 +130,7 @@
 }
 
 #card-name {
+    margin-top: 1vh;
     color: #aaaaaa;
     font-size: 1.3rem;
     height: 5vh;
@@ -112,6 +166,14 @@
 }
 
 @media (max-width: 1100px) {
+    .lista-vazia {
+        margin-top:40vh;
+        margin-left: 15vh;
+    }
+    #building {
+        height: 300px;
+        width: 300px;
+    }
     .cards{
         padding-top: 15vh;
         justify-content: center;

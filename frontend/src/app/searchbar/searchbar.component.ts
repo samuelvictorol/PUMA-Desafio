@@ -20,7 +20,7 @@ export class SearchbarComponent implements OnInit {
 
   async findUser() {
     if(this.userService.getAllUsersLenght() == 5){
-      return alert('Você já tem 5 usuarios favoritos')
+      return alert('Você já tem 5 usuarios favoritos. Apague um para continuar.')
     } else{
       try {
         const response = await fetch(`https://api.github.com/users/${this.username}`);
