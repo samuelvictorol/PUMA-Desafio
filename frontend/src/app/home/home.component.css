@@ -213,7 +213,7 @@ p{
         justify-content: center;
         align-items: initial;
         height: 250vh;
-        gap: 1rem;
+        gap: .5rem;
     }
     .card {
         width: 90%;
