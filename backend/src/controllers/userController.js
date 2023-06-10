@@ -22,7 +22,31 @@ const addUser = (req, res) => {
     res.status(201).json({ message: 'Usuário adicionado com sucesso' });
 }
 
+const deleteUser = (req, res) => {
+    const userLogin= req.params.login;  // Assume que o ID do usuário está vindo como um parâmetro de rota
+    const dbPath = path.join(__dirname, '../data/db.json');
+    const favUsersDB = require(dbPath);
+  
+    // Encontra o índice do usuário no array usando o ID
+    const userIndex = favUsersDB.findIndex(user => user.login === userLogin);
+  
+    // Se o usuário não foi encontrado, retorna um erro
+    if (userIndex === -1) {
+        return res.status(404).json({ message: 'Usuário não encontrado' });
+    }
+  
+    // Remove o usuário do array
+    favUsersDB.splice(userIndex, 1);
+  
+    // Atualiza o arquivo db.json com a nova lista de usuários favoritos
+    fs.writeFileSync(dbPath, JSON.stringify(favUsersDB));
+  
+    // Retorna uma resposta de sucesso
+    res.status(200).json({ message: 'Usuário deletado com sucesso' });
+}
+
 module.exports = {
     getAllUsers,
-    addUser
+    addUser,
+    deleteUser
 }
