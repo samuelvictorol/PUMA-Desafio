@@ -1,9 +1,9 @@
 <nav class="searchbar">
     <img id="github-svg" src="assets/icons/github.svg" alt="ícone github">
-    <input (keyup.enter)="findUser()" [(ngModel)]="username" id="searchbar-input" type="text" placeholder="Search">
+    <input (keyup.enter)="findUser()" [(ngModel)]="username" id="searchbar-input" type="text" placeholder="Digite o usuario que deseja adicionar">
     <button id="search-btn" (click)="findUser()">Buscar usuário</button>
 </nav>
-<div class="modal-user animate__animated animate__fadeIn" *ngIf="modal">
+<div class="modal-user animate__animated animate__fadeIn animate__faster" *ngIf="modal">
     <div class="loader"></div>
     <div class="modal animate__animated animate__zoomIn"*ngIf="user" >
         <img (click)="closeModal()" src="assets/icons/cancel.svg" alt="cancelar" id="cancel-btn">

@@ -39,7 +39,8 @@
 
 
 #card-img {
-    border-radius: 60px;
+    border-top: 10px solid #2f2f2f;
+    border-radius: 100%;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.599);
     width: 10rem;
     height: 10rem;
